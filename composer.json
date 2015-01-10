@@ -164,6 +164,9 @@
             "Magento\\Setup\\": "setup/module/Magento/Setup/src/"
         }
     },
+    "config": {
+        "bin-dir": "tools"
+    },
     "repositories": [
         {
             "type": "composer",
