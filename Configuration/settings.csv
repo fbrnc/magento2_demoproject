@@ -1,0 +1,14 @@
+Handler,Param1,Param2,Param3,DEFAULT,production,devbox
+,,,,,,
+Est_Handler_CopyFile,app/etc/config.php,,,,Configuration/config_prod.php,Configuration/config_devbox.php
+Est_Handler_MarkerReplace,app/etc/config.php,###DB_HOST###,,--skip--,###ENV:DB_HOST###,
+Est_Handler_MarkerReplace,app/etc/config.php,###DB_USER###,,--skip--,###ENV:DB_USER###,
+Est_Handler_MarkerReplace,app/etc/config.php,###DB_NAME###,,--skip--,###ENV:DB_NAME###,
+Est_Handler_MarkerReplace,app/etc/config.php,###DB_PASSWORD###,,--skip--,###ENV:DB_PASSWORD###,
+,,,,,,
+Est_Handler_MarkerReplace,app/etc/config.php,###REDIS_CACHE###,,--skip--,###ENV:REDIS_CACHE###,
+Est_Handler_MarkerReplace,app/etc/config.php,###REDIS_FPC###,,--skip--,###ENV:REDIS_FPC###,
+,,,,,,
+# Urls,,,,,,
+Est_Handler_Magento_CoreConfigData,%,%,web/{{un|}}secure/base{{_skin|_media|_js|}}_url,--delete--,,
+Est_Handler_Magento_CoreConfigData,default,0,web/{{un|}}secure/base_url,,http://m2demo.aoe-aws.com/,http://www.magento2.dev/
